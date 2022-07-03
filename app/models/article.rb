@@ -1,5 +1,9 @@
 class Article < ApplicationRecord
   include Visible
+  
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
 
   has_many :comments, dependent: :destroy
 
