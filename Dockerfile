@@ -6,8 +6,8 @@ RUN gem install bundler
 RUN mkdir /blog
 WORKDIR /blog
 
-ADD Gemfile /blog/Gemfile
-ADD Gemfile /blog/Gemfile.lock
+ADD Gemfile Gemfile
+ADD Gemfile Gemfile.lock
 
 COPY . /blog
 RUN bundle install
